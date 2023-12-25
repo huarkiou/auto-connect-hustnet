@@ -109,6 +109,7 @@ def ping(host, n):
 def pong():
     return ping("hust.edu.cn", 4) or ping("8.8.8.8", 4)
 
+
 def get_userinfo(secret_file):
     if not os.path.exists(secret_file):
         with open(secret_file, 'w') as f:
@@ -121,6 +122,7 @@ def get_userinfo(secret_file):
         if username == "" or password == "":
             raise Exception("error username or password")
     return username, password
+
 
 if __name__ == "__main__":
     log("Script started")
