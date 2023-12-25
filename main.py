@@ -10,9 +10,10 @@ from selenium.webdriver.common.by import By
 
 def count_lines(filename):
     lines = 0
-    with open(filename, "r") as f:
-        for _ in f:
-            lines += 1
+    if os.path.exists(filename):
+        with open(filename, "r") as f:
+            for _ in f:
+                lines += 1
     return lines
 
 
